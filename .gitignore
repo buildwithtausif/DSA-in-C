@@ -1,0 +1,6 @@
+# ignore all exe files
+*exe
+#ignore all image files
+*jpg
+*jpeg
+*png

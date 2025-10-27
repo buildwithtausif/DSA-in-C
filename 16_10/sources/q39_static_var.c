@@ -1,0 +1,1 @@
+// wap to display usage of static variable

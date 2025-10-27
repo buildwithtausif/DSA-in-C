@@ -1,0 +1,1 @@
+// WAP to find SIMPLE INTEREST in a function. Create a function with arguments and return type

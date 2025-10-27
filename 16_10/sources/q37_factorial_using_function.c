@@ -1,0 +1,1 @@
+// WAP find factorial of a number using function and return its value in the calling function

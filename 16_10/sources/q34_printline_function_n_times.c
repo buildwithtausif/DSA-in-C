@@ -10,12 +10,11 @@ int printline(int n, char ch); // prints 'ch' n-times
 int main() {
     printf("Tausif Alam, BCA-1EA\n\n");
     char character;
-    char iteration = 0;
+    int iteration = 0;
 	printf("Please enter character to print: ");
 	scanf("%c", &character);
 	printf("\nHow many times to print?: ");
 	scanf("%d", &iteration);
-    // Your code starts here
 	printline(iteration, character);
     return 0;
 }
@@ -26,4 +25,5 @@ int printline(int n, char ch) {
 		printf("%c", ch);
 		counter++;
 	}
+	return 0;
 }

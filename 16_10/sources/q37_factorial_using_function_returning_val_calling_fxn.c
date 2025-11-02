@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 // function def
-int factorial(int num);
+long long int factorial(int num);
 int main() {
     printf("Tausif Alam, BCA-1EA\n\n");
 	int number;
@@ -19,12 +19,13 @@ int main() {
 	printf("Factorial of %d is %d", number, output);
     return 0;
 }
-int factorial(int num) {
-	int fact;
-	if (num == 0 || num == 1) {
+long long int factorial(int num) {
+	int fact = 1,i;
+	if (num == 1 || num == 0) {
 		return 1;
-	} else {
-		fact = num*factorial(num-1);
-		return fact;
 	}
+	for (i = 1; i <= num; i++) {
+		fact *= i;
+	}
+	return fact;
 }

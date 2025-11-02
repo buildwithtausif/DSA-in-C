@@ -1,5 +1,5 @@
 /*
- * Program: [Show sum of n-elements of array and their average]
+ * Program: [Generate Reverse of Array]
  * Author:  Tausif Alam, BCA-1EA
  * Date:    " . 2025.Year . "-" . 10.Month . "-" . 30.Day . "
  */
@@ -8,7 +8,7 @@
 
 int main() {
     printf("Tausif Alam, BCA-1EA\n\n");
-    int size;
+	int size;
 	printf("Please enter size of array: ");
 	scanf("%d", &size);
 	// size of the number-array is defined by the user
@@ -20,28 +20,22 @@ int main() {
 		scanf("%ld", &numArray[itterator]);
 	}
 	// print array and output(s)
-	printf("\n\n-------------------OUTPUT-------------------\n\n");
 	itterator = 0; // reset itterator
-	printf("Provided array = ");
+	printf("\nProvided array = ");
 	for ( ; itterator < size; itterator++) {
 		printf("%ld ", numArray[itterator]);
 	}
-	itterator = 0; // reset itterator
-	printf("\nArray sum = ");
-	long int sumOfArray = 0;
-	for ( ; itterator < size; itterator++) {
-		sumOfArray += numArray[itterator];
+	printf("\n\n-------------------OUTPUT-------------------\n\n");
+	itterator = size - 1; // reset itterator
+	long int rArray[size], extracted_nums, j = 0;
+	printf("\nReverse array = ");
+	for ( ; itterator >= 0; itterator--) {
+		extracted_nums = numArray[itterator];
+		// push extracted 
+		rArray[j] = extracted_nums;
+		// print
+		printf("%d ", rArray[j]);
+		j++;
 	}
-	// print the sum of array
-	printf("%ld", sumOfArray);
-	
-	itterator = 0; // reset itterator
-	printf("\nArray average = ");
-	long int avgOfArray = 0;
-	for ( ; itterator < size; itterator++) {
-		avgOfArray += (numArray[itterator]);
-	}
-	// print the avg
-	printf("%ld", avgOfArray / size);
     return 0;
 }

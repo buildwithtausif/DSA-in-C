@@ -8,13 +8,13 @@
 
 int main() {
     printf("Tausif Alam, BCA-1EA\n\n");
-	long int size;
+	int size;
 	printf("Please enter size of array: ");
-	scanf("%ld", &size);
+	scanf("%d", &size);
 	// size of the number-array is defined by the user
 	long int numArray[size];
 	// get user-input for elements in array of provided size
-	long int itterator;
+	int itterator;
 	for (itterator = 0; itterator < size; itterator++) {
 		printf("Please enter element-%ld: ", itterator+1);
 		scanf("%ld", &numArray[itterator]);

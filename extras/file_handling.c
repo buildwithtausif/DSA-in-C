@@ -18,7 +18,11 @@ int main() {
     // when everything is 200ok
     // at this point a blank file is created in the system
     // write something of our into the file
-    char data[100] = "this machines say i can handle files";
+    char data[36] = "this machines say i can handle files";
+    // int j;
+    // for (j = 0; j < 36; j++) {
+    //     putc(data[j], fp);
+    // }
     fputs(data, fp); // adds that string char[]
     fclose(fp);
     printf("\n\nData successfully written in file");
@@ -39,7 +43,7 @@ int main() {
         printf("Error opening file\n");
         return 1;
     }
-    int data2[5] = {1, 2, 3, 4, 5};
+    int data2[5] = {12345678, 2, 3, 4, 5};
     int i;
     for (i = 0; i < 5; i++) {
         putw(data2[i], fp);
@@ -50,13 +54,16 @@ int main() {
     fp = fopen("./file_handling_int.bin", "rb");
     printf("\n\nRead from file: ");
     for (i = 0; i < 5; i++) {
-        printf("%d", getw(fp));
+        printf("%d ", getw(fp));
     }
     fclose(fp);
     /* a very genuine question is, the same program when writes a character string
      * and when I open that character wala file it shows me the same string but
      * while writing an int value and doing the same action it shows some garbage values
      * but when machine reads it is read correctly... how?
+     */
+    /**
+     * putw, getw are obsolete functions
      */
     return 0;
 }

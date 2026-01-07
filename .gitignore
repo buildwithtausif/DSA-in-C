@@ -6,6 +6,7 @@
 *png
 # removing previous semester tracked files and folders - (not maintaining them)
 # ignore all other folders except the DSA and project euler
+.idea/
 .idx/
 .vscode/
 04_09/

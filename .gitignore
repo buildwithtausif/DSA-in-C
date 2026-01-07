@@ -1,6 +1,23 @@
 # ignore all exe files
 *exe
-#ignore all image files
+# ignore all image files
 *jpg
 *jpeg
 *png
+# removing previous semester tracked files and folders - (not maintaining them)
+# ignore all other folders except the DSA and project euler
+.idx/
+.vscode/
+04_09/
+06_11/
+11_09/
+13_11/
+16_10/
+17_11/
+18_09/
+18_11/
+25_09/
+28_08/
+30_10/
+code_practice_dec_2025/
+extras/

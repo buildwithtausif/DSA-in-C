@@ -1,6 +1,6 @@
 // To find if a given number is Armstrong number or not, using while loop
 /*
-	 this program is valid only for three digit numbers
+	 this program is valid only for three_digit numbers
 */
 /*
 	variation is print all armstrong numbers between 100 - 999
@@ -50,9 +50,6 @@ int main() {
 		}
 	
 	}
-	
-	
-	
 	return 0;
 }
 

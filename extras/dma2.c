@@ -32,6 +32,7 @@ int main() {
     printf("%s\n", myperson->name);
     printf("%d\n", myperson->age);
 
+    // extremely important to avoid memory leak, coz once a memory is leaked in heap we can't clear it as we lost its address
     free(myperson);
 
     return 0;

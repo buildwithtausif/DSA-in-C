@@ -108,7 +108,20 @@ void del(int length, int (*array)[length]) {
 
 // search an element in array at position 'pos'
 void traverse(int length, int (*array)[length]) {
-
+    int pos;
+    // if the array is empty, handle the case
+    if (elem_count == 0) {
+        printf("\nArray is Empty");
+    } else {
+        // get the input from user
+        printf("\nEnter position: ");
+        scanf("%d", &pos);
+        if (pos >= elem_count+1 || pos <= 0) {
+            printf("\nInvalid positon, out-of-bounds");
+        } else if ((pos>=1) && (pos<=elem_count)){
+            printf("\nThe element at %d is %d", pos, (*array)[pos-1]);
+        }
+    }
 }
 
 // reverse the array

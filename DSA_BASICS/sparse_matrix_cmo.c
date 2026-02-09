@@ -6,7 +6,7 @@
  * if a matrix is sparse then convert it into a triplex matrix
  *
  * So, the first requirement is to have a matrix
- * In this program we will generate triplex matrix of a sparse matrix using RMO approach
+ * In this program we will generate triplex matrix of a sparse matrix using CMO approach
  */
 int main() {
     int row, col, i, j, nonZero = 0, rowTM=0;
@@ -47,18 +47,18 @@ int main() {
         // declare triplexMatrix
         int triplexMatrix[nonZero+1][3];
         // using RMO approach
-        triplexMatrix[rowTM][0] = row;
-        triplexMatrix[rowTM][1] = col;
+        triplexMatrix[rowTM][0] = col;
+        triplexMatrix[rowTM][1] = row;
         triplexMatrix[rowTM][2] = nonZero;
 
         // now fill this matrix for each non-zero occurrences in the originalMatrix
         for (i = 0; i < row; i++) {
             for (j = 0; j < 3; j++) {
-                if (originalMatrix[i][j] != 0) {
+                if (originalMatrix[j][i] != 0) {
                     rowTM++; // increment the row of triplex matrix and fill it
-                    triplexMatrix[rowTM][0] = i; // row number
-                    triplexMatrix[rowTM][1] = j; // column number
-                    triplexMatrix[rowTM][2] = originalMatrix[i][j]; // the non-zero value found
+                    triplexMatrix[rowTM][0] = j; // column number
+                    triplexMatrix[rowTM][1] = i; // row number
+                    triplexMatrix[rowTM][2] = originalMatrix[j][i]; // the non-zero value found
                 }
             }
         }

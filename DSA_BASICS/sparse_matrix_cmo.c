@@ -61,8 +61,8 @@ int main() {
         triplexMatrix[rowTM][2] = nonZero;
 
         // now fill this matrix for each non-zero occurrences in the originalMatrix
-        for (i = 0; i < row; i++) {
-            for (j = 0; j < 3; j++) {
+        for (i = 0; i < col; i++) {
+            for (j = 0; j < row; j++) {
                 if (originalMatrix[j][i] != 0) {
                     rowTM++; // increment the row of triplex matrix and fill it
                     triplexMatrix[rowTM][0] = j; // column number
@@ -73,7 +73,7 @@ int main() {
         }
         // now print the triplex matrix
         printf("\nThe triplex matrix: \n");
-        for (i = 0; i < rowTM; i++) {
+        for (i = 0; i <= rowTM; i++) {
             for (j = 0; j < 3; j++) {
                 printf("%d\t", triplexMatrix[i][j]);
             }

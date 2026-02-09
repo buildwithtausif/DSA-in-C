@@ -9,12 +9,22 @@
  * In this program we will generate triplex matrix of a sparse matrix using RMO approach
  */
 int main() {
+    /*
+     * a note for variable abbriviations used
+     * rowTM = row of the triplex_matrix
+     * nonZero = occurences of the non-zero element in the originalMatrix (to be declared at run-time)
+     * i = row counter iteration variable
+     * j = column counter iteration variable
+     * row = the number of the rows in the originalMatrix (to be taken from user)
+     * col = the number of the column in the originalMatix (to be taken from the user)
+     */
     int row, col, i, j, nonZero = 0, rowTM=0;
     // ask the size of matrix from the user
     printf("\nPlease enter number rows in matrix: ");
     scanf("%d", &row);
     printf("\nPlease enter number of columns in matrix: ");
     scanf("%d", &col);
+
     // now create a matrix of provided MxN size
     int originalMatrix[row][col];
 
@@ -38,7 +48,7 @@ int main() {
         }
         printf("\n");
     }
-    // to check if the given matrix is a sparse matrix
+    // to check if the given matrix is a sparse matrix (go by the definition of sparse matrix)
     int const halfCount = ceil((row*col)/2);
     if (nonZero > halfCount) {
         printf("Not a sparse matrix");

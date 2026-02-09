@@ -10,9 +10,9 @@
  */
 int main() {
     /*
-     * a note for variable abbriviations used
+     * a note for variable abbreviations used
      * rowTM = row of the triplex_matrix
-     * nonZero = occurences of the non-zero element in the originalMatrix (to be declared at run-time)
+     * nonZero = occurrences of the non-zero element in the originalMatrix (to be declared at run-time)
      * i = row counter iteration variable
      * j = column counter iteration variable
      * row = the number of the rows in the originalMatrix (to be taken from user)

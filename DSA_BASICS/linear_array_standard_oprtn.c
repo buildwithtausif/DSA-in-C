@@ -126,5 +126,14 @@ void traverse(int length, int (*array)[length]) {
 
 // reverse the array
 void reverse(int length, int (*array)[length]) {
-
+    // int idx;
+    // // if the array is empty, handle the case
+    // if (elem_count == 0) {
+    //     printf("\nArray is Empty");
+    // } else {
+    //     for (idx = elem_count; idx >= idx - elem_count; idx--) {
+    //         (*array)[idx] = (*array)[idx - elem_count];
+    //         elem_count--;
+    //     }
+    // }
 }

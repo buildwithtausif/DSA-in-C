@@ -15,7 +15,7 @@ int elem_count = 0; // this is the count of elements in array at a given instant
 void show(int length, int (*array)[length]);
 void insert(int length, int (*array)[length]);
 void del(int length, int (*array)[length]);
-void traverse(int length, int (*array)[length]);
+void search(int length, int (*array)[length]);
 void reverse(int length, int (*array)[length]);
 // main function
 int main() {
@@ -33,7 +33,7 @@ int main() {
                     break;
             case 3: del(SIZE_OF_ARRAY, to_array);
                     break;
-            case 4: traverse(SIZE_OF_ARRAY, to_array);
+            case 4: search(SIZE_OF_ARRAY, to_array);
                     break;
             case 5: reverse(SIZE_OF_ARRAY, to_array);
                     break;
@@ -42,14 +42,13 @@ int main() {
         }
     }
 }
-
-// display array elements
+// display (traversal) array elements
 void show(int length, int (*array)[length]) {
     for (int i = 0; i < length; i++) {
+        // print not null values
         printf(" %d ", (*array)[i]);
     }
 }
-
 // insert to array at position 'pos'
 void insert(int length, int (*array)[length]) {
     int pos, idx;
@@ -83,7 +82,6 @@ void insert(int length, int (*array)[length]) {
         printf("\nArray is Full");
     }
 }
-
 // delete element in array at position 'pos'
 void del(int length, int (*array)[length]) {
     int pos, idx;
@@ -105,35 +103,25 @@ void del(int length, int (*array)[length]) {
         }
     }
 }
-
-// search an element in array at position 'pos'
-void traverse(int length, int (*array)[length]) {
-    int pos;
-    // if the array is empty, handle the case
-    if (elem_count == 0) {
-        printf("\nArray is Empty");
-    } else {
-        // get the input from user
-        printf("\nEnter position: ");
-        scanf("%d", &pos);
-        if (pos >= elem_count+1 || pos <= 0) {
-            printf("\nInvalid positon, out-of-bounds");
-        } else if ((pos>=1) && (pos<=elem_count)){
-            printf("\nThe element at %d is %d", pos, (*array)[pos-1]);
+// linear-search for an element in array
+void search(int length, int (*array)[length]) {
+    int target;
+    int found = 0; // Flag to track if we found the target
+    printf("\nEnter the number to search: ");
+    scanf("%d", &target);
+    for (int i = 0; i < length; i++) {
+        if ((*array)[i] == target) {
+            printf("\n%d is found at position %d", target, i + 1);
+            found = 1;
+            break; // Stop searching once we find it
         }
     }
+    // 2. Only print this if the loop finished without finding anything
+    if (!found) {
+        printf("\nArray does not contain %d", target);
+    }
 }
-
 // reverse the array
 void reverse(int length, int (*array)[length]) {
-    // int idx;
-    // // if the array is empty, handle the case
-    // if (elem_count == 0) {
-    //     printf("\nArray is Empty");
-    // } else {
-    //     for (idx = elem_count; idx >= idx - elem_count; idx--) {
-    //         (*array)[idx] = (*array)[idx - elem_count];
-    //         elem_count--;
-    //     }
-    // }
+
 }

@@ -16,7 +16,7 @@ int main() {
      * i = row counter iteration variable
      * j = column counter iteration variable
      * row = the number of the rows in the originalMatrix (to be taken from user)
-     * col = the number of the column in the originalMatix (to be taken from the user)
+     * col = the number of the column in the originalMatrix (to be taken from the user)
     */
     int row, col, i, j, nonZero = 0, rowTM=0;
     // ask the size of matrix from the user

@@ -125,7 +125,7 @@ void display() {
     }
 }
 void search() {
-    int data_to_search, found_bool = 0;
+    int data_to_search, found = 0;
     printf("\nEnter item to search: ");
     scanf("%d", &data_to_search);
     if (head == NULL || node_count <= 0) {
@@ -134,14 +134,14 @@ void search() {
         current = head;
         while (current != NULL) {
             if (current->data == data_to_search) {
-                found_bool = 1;
+                found = 1;
                 break;
             } else {
                 current = current->next_node;
             }
         }
         // prompt user
-        if (found_bool == 0) {
+        if (found == 0) {
             printf("\nData is found");
         } else {
             printf("\nData not found");

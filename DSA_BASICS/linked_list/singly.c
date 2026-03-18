@@ -15,12 +15,11 @@ void insert();
 void delete();
 void display();
 void search();
-void merge();
 // main
 int main() {
     int choice;
     while (1) {
-        printf("\n1.Append\n2.Insert\n3.Delete\n4.Display\n5.Search\n6.Merge\n7.Exit\nEnter Your Choice: ");
+        printf("\n1.Append\n2.Insert\n3.Delete\n4.Display\n5.Search\n6.Exit\nEnter Your Choice: ");
         scanf("%d", &choice);
         switch (choice) {
             case 1: append(); break;
@@ -28,8 +27,7 @@ int main() {
             case 3: delete(); break;
             case 4: display(); break;
             case 5: search(); break;
-            case 6: merge(); break;
-            case 7: exit(0);
+            case 6: exit(0);
             default: printf("\nInvalid Choice\n");
         }
     }
@@ -147,7 +145,4 @@ void search() {
             printf("\nData not found");
         }
     }
-}
-void merge() {
-    
 }
